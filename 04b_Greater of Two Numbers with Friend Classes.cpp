@@ -8,7 +8,8 @@ class first
 private:
     int num;
 public:
-    void getdata() {
+    void getdata() 
+    {
         cout << "Enter number 1: ";
         cin >> num;
     }
@@ -20,7 +21,8 @@ class second
 private:
     int num;
 public:
-    void getdata() {
+    void getdata() 
+    {
         cout << "Enter number 2: ";
         cin >> num;
     }
