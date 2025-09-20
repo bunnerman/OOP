@@ -7,11 +7,11 @@ class Animal
     public:
     Animal()
     {
-        cout << "Animal Created :)\n";
+        cout << "Animal Created\n";
     }
     ~Animal()
     {
-        cout << "Animal Destroyed :(\n";
+        cout << "Animal Destroyed\n";
     }
 };
 
