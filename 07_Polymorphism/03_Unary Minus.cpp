@@ -13,7 +13,8 @@ public:
     }
     Example operator- () 
     {
-        return Example(--(this->value));
+        int t = this->value - 1;
+        return Example(t);
     }   
     void putData()
     {
