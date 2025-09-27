@@ -24,9 +24,9 @@ public:
 int main()
 {
     Example n1(10);
-    Example n3 = -n1;
+    Example n2 = -n1;
 
-    n3.putData();
+    n2.putData();
 
     return 0;
 }
