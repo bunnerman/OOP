@@ -2,23 +2,23 @@
 #include <string>
 using namespace std;
 
-class Rectangle
+class RectangleArea
 {
     private:
     int length;
     int breadth;
     public:
-    Rectangle()
+    RectangleArea()
     {
         length = 0;
         breadth = 0;
     }
-    Rectangle(int l, int b)
+    RectangleArea(int l, int b)
     {
         length = l;
         breadth = b;
     }
-    Rectangle(int l)
+    RectangleArea(int l)
     {
         length = l;
         breadth = l;
@@ -31,15 +31,15 @@ class Rectangle
 
 int main()
 {
-    Rectangle obj;
-    obj.putData();
     int l, b;
-    cout << "Enter length: ";
+    cout << "Enter length of Lab: ";
     cin >> l;
-    cout << "Enter Breadth: ";
+    cout << "Enter Breadth of Lab: ";
     cin >> b;
-    Rectangle obj2(l, b);
+    RectangleArea obj(l, b);
+    obj.putData();
+    cout << "Enter length of side of classroom: ";
+    cin >> l;
+    RectangleArea obj2(l);
     obj2.putData();
-    Rectangle obj3(l);
-    obj3.putData();
 }
