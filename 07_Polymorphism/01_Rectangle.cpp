@@ -7,39 +7,46 @@ class RectangleArea
     private:
     int length;
     int breadth;
+    int area;
     public:
     RectangleArea()
     {
         length = 0;
         breadth = 0;
     }
-    RectangleArea(int l, int b)
+    void calcData(int l, int b)
     {
-        length = l;
-        breadth = b;
+        area = l * b;
     }
-    RectangleArea(int l)
+    void calcData(int l)
     {
-        length = l;
-        breadth = l;
+        area = l * l;
+    }
+    void getData()
+    {
+        cout << "Enter Length: ";
+        cin >> length;
+        cout << "Enter breadth: ";
+        cin >> breadth;
+        this->calcData(length, breadth);
+    }
+    void getData(int )
+    {
+        cout << "Enter length of side: ";
+        cin >> length;
+        this->calcData(length);
     }
     void putData()
     {
-        cout << "Area = " << (length * breadth) << "\n";
+        cout << "Area is " << area << "\n";
     }
 };
 
 int main()
 {
-    int l, b;
-    cout << "Enter length of Lab: ";
-    cin >> l;
-    cout << "Enter Breadth of Lab: ";
-    cin >> b;
-    RectangleArea obj(l, b);
+    RectangleArea obj, obj2;
+    obj.getData();
     obj.putData();
-    cout << "Enter length of side of classroom: ";
-    cin >> l;
-    RectangleArea obj2(l);
+    obj2.getData(1); // dummy parameter to indicate that we are now taking area of square
     obj2.putData();
 }
