@@ -4,9 +4,10 @@ using namespace std;
 
 class Example
 {
+    private:
     int value;
 
-public:
+    public:
     Example(int v)
     {
         value = v;
@@ -31,9 +32,8 @@ int main()
 {
     Example n1(10);
     Example n2 = ++n1;
-    Example n3 = n1++;  
-
     n2.putData();
+    Example n3 = n2++;  
     n3.putData();
 
     return 0;
