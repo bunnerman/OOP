@@ -4,9 +4,10 @@ using namespace std;
 
 class Example
 {
+    private:
     int value;
 
-public:
+    public:
     Example(int v)
     {
         value = v;
