@@ -24,15 +24,15 @@ class RectangleArea
     }
     void getData()
     {
-        cout << "Enter Length: ";
+        cout << "Enter Length of lab: ";
         cin >> length;
-        cout << "Enter breadth: ";
+        cout << "Enter breadth of lab: ";
         cin >> breadth;
         this->calcData(length, breadth);
     }
     void getData(int )
     {
-        cout << "Enter length of side: ";
+        cout << "Enter Length of side of classroom: ";
         cin >> length;
         this->calcData(length);
     }
