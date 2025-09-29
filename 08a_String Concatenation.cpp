@@ -19,7 +19,7 @@ class Example
 
     void display() 
     {
-        cout << str << endl;
+        cout << str << "\n";
     }
 };
 
