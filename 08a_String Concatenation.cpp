@@ -12,7 +12,7 @@ class Example
         str = s;
     }
 
-    Example operator+(const Example& str2) 
+    Example operator+(Example& str2) 
     {
         return Example(str + str2.str); // just use std::string + 
     }
