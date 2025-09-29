@@ -4,9 +4,9 @@ using namespace std;
 
 class Example 
 {
-    public:
+    private:
     string str;
-
+    public:
     Example(string s = "") 
     {
         str = s;
