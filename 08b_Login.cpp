@@ -2,81 +2,51 @@
 #include <string>
 using namespace std;
 
-class ILogin 
+class ILogin
 {
-protected:
+    protected:
     string name;
-    string password;
-
-public:
-    virtual void accept() 
-    {
-        cout << "Enter name: ";
-        cin >> name;
-        cout << "Enter password: ";
-        cin >> password;
-    }
-
-    virtual void display() 
-    { 
-        cout << "Name: " << name << endl;
-        cout << "Password: " << password << endl;
-    }
-
-    virtual ~ILogin() {}
+    string pwd;
+    public:
+    virtual void accept(){}
 };
 
-class EmailLogin : public ILogin {
-private:
-    string email;
-public:
-    void accept() override 
-    {
-        ILogin::accept();
-        cout << "Enter email: ";
-        cin >> email;
-    }
-
-    void display() override 
-    {
-        cout << "\n---Email Login Details---\n";
-        ILogin::display();
-        cout << "Email: " << email << endl;
-    }
-};
-
-class MembershipLogin : public ILogin {
-private:
-    int membershipID;
-public:
-    void accept() override 
-    {
-        ILogin::accept();
-        cout << "Enter membership ID: ";
-        cin >> membershipID;
-    }
-
-    void display() override 
-    {
-        cout << "\n---Membership Login Details---\n";
-        ILogin::display();
-        cout << "Membership ID: " << membershipID << endl;
-    }
-};
-
-int main() 
+class EmailLogin: public ILogin
 {
-    EmailLogin emailEmp;
-    MembershipLogin memberEmp;
+    public:
+    void accept() override
+    {
+        name = "abc@mail.com";
+        pwd = "example";
+        cout << "Email Login Name: " << name << "\n";
+        cout << "Password: " << pwd << "\n";
+    }
+};
 
-    cout << "Email Login Employee Details:\n";
-    emailEmp.accept();
 
-    cout << "\nMembership Login Employee Details:\n";
-    memberEmp.accept();
+class MembershipLogin: public ILogin
+{
+    public:
+    void accept() override
+    {
+        name = "member";
+        pwd = "memberpwd";
+        cout << "Membership Login Name: " << name << "\n";
+        cout << "Password: " << pwd << "\n";
+    }
+};
 
-    emailEmp.display();
-    memberEmp.display();
-
+int main()
+{
+    ILogin *login;
+    EmailLogin e;
+    MembershipLogin m;
+    
+    login = &e;
+    login->accept();
+    
+    login = &m;
+    login->accept();
+    
     return 0;
 }
